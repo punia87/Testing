@@ -91,7 +91,7 @@ END LOOP;
   update contactdetails cd set cd.start_dat = TO_DATE (i_newDate, 'DD.MM.YYYY') where cd.customer_ref = i_customerRef; 
   select count(*) into countCompanyInfo from CompanyDetails where customer_ref = i_customerRef;
     IF countCompanyInfo > 0 THEN
-        update CompanyDetails set START_DAT = TO_DATE (i_newDate || ' 10:00:00', 'DD.MM.YYYY      HH:MI:SS') where CUSTOMER_REF = i_customerRef;
+     #   update CompanyDetails set START_DAT = TO_DATE (i_newDate || ' 10:00:00', 'DD.MM.YYYY      HH:MI:SS') where CUSTOMER_REF = i_customerRef;
      END IF;
   
   
